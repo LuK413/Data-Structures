@@ -7,4 +7,4 @@ is commonly used for undo, but can also be used for back, function calls, mathem
 expressions and parsing.
 
 This stack implementation allows the user to push elements, pop elements, check the top
-of the stack and check if it is empty.
+of the stack, check if it is empty and to print the entire stack.
