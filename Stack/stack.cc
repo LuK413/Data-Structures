@@ -26,3 +26,24 @@ void Stack<T>::push(T data) {
     this->contents[this->size] = data;
     ++size;
 }
+
+template <typename T>
+T Stack<T>::pop() {
+    --this->size;
+    return this->contents[this->size];
+}
+
+template <typename T>
+bool Stack<T>::empty() {
+    return this->size == 0;
+}
+
+template <typename T>
+T Stack<T>::top() {
+    return this->contents[this->size - 1];
+}
+
+template <typename T>
+Stack<T>::~Stack<T>() {
+    delete [] this->contents;
+}

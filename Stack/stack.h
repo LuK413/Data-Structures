@@ -11,7 +11,7 @@ public:
     Stack();
     void push(T data);
     T pop();
-    bool isEmpty();
+    bool empty();
     T top();
     ~Stack();
 };
