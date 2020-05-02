@@ -3,42 +3,90 @@
 
 #include <iostream>
 
-// template <typename T>
-// class Stack {
-// private:
-//     T *contents;
-//     int size;
-//     int capacity;
-// public:
-//     int getSize();
-//     T get(int num);
-//     Stack();
-//     void push(T data);
-//     T pop();
-//     bool empty();
-//     T top();
-//     ~Stack();
-
-//     // friend std::ostream &operator<<(std::ostream &out, const Stack<T> &s);
-// };
-
+template <class T>
 class Stack {
 private:
-    int *contents;
+    T *contents;
     int size;
     int capacity;
 public:
     int getSize();
-    int get(int num);
+    T get(int num);
     Stack();
-    void push(int data);
-    int pop();
+    void push(T data);
+    T pop();
     bool empty();
-    int top();
+    T top();
     ~Stack();
 
     // friend std::ostream &operator<<(std::ostream &out, const Stack<T> &s);
 };
 
+template <class T>
+Stack<T>::Stack() {
+    this->contents = new T[2];
+    this->size = 0;
+    this->capacity = 2;
+}
+
+template <class T>
+void Stack<T>::push(T data) {
+    if (this->size == this->capacity) {
+        T *temp = new T[capacity * 2];
+        T *rm = this->contents;
+
+        for (int i = 0; i < this->size; ++i) 
+            temp[i] = this->contents[i];
+
+        this->contents = temp;
+        delete [] rm;
+        this->capacity *= 2;
+    }
+
+    this->contents[this->size] = data;
+    ++this->size;
+}
+
+template <typename T>
+T Stack<T>::pop() {
+    try {
+        if (this->size == 0)
+            throw 0;
+        --this->size;
+        return this->contents[this->size];
+    } catch (int e) {
+        std::cerr << "The stack is empty, cannot pop." << std::endl;
+    }
+    
+}
+
+template <typename T>
+bool Stack<T>::empty() {
+    return this->size == 0;
+}
+
+template <typename T>
+T Stack<T>::top() {
+    try {
+        return this->contents[this->size - 1];
+    } catch (std::exception e) {
+        std::cerr << "Could not pop. " << e.what() << std::endl;
+    }
+}
+
+template <class T>
+Stack<T>::~Stack() {
+    delete [] this->contents;
+}
+
+template <class T>
+T Stack<T>::get(int num) {
+    return this->contents[num];
+}
+
+template <class T>
+int Stack<T>::getSize() {
+    return this->size;
+}
 
 #endif

@@ -1,11 +1,10 @@
 #include <iostream>
 #include <exception>
-#include <string>
 #include "stack.h"
 
 int main(int argc, char const *argv[]) {
-    // Stack<int> s;
-    Stack s;
+    Stack<float> s;
+    // Stack s;
     if (s.empty())
         std::cout << "empty" << std::endl;
     s.push(1);
