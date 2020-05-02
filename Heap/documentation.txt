@@ -1,0 +1,10 @@
+A heap is a complete binary tree data structure that can be categorized into either
+a max heap or a min heap. It has the following properties:
+
+1. Each node must have at most two child nodes.
+2. The key of a node is greater(lesser) than or equal to the keys of its children. 
+
+Heaps are commonly used for priority queues and can also be used for heap sort.
+
+This implementation will be a max heap and supports insertion, returning max, extracting
+max and increasing a certain key.

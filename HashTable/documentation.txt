@@ -1,0 +1,20 @@
+A Hash Table is similar to a map structure - it has fast key-value lookup. A process called
+hashing is used to convert the key to some hash code, which is then converted to an index
+for the value. Two different keys could potentially have the same hash code or index, but
+there are two main ways to handle this:
+
+1. Chaining: Each "bucket" for an index or hash code is independent and is comprised of
+a list of entries for the data that has collided.
+2. Open Addressing: This method allows all the entries of the table to be stored in the
+array itself. If a collision occurs, another spot will be found for that entry in a form of
+a sequence. Linear probing allows for the interval between probes to be fixed and quadratic
+probing allows for the interval to be increased by some output of a quadratic function. 
+
+Hash tables are typically used to take advantage of the fast key-value lookup, but 
+requiring more space in exchange. The performance of a hash table is dependent upon
+the uniformity of the hash function, the size of the hash table and the collision 
+handling method.This implementation will use a fairly simple hash function, a modestly 
+sized table and chaining to resolve collisions.
+
+This hash table implementation allows the user to check for size, emptiness, lookup,
+insertion and deletion.

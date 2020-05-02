@@ -1,0 +1,11 @@
+A Binary Search Tree is an ordered tree data structure that has the following
+properties:
+
+1. Each node must have at most two child nodes.
+2. The left sub-tree only contains nodes with keys lesser than the node's key.
+3. The right sub-tree only contains nodes with keys greater than the node's key.
+4. The left and right sub-trees are also binary search trees.
+
+It is primarily used for efficient sorting and searching.
+
+This tree implementation allows for searching, inserting and deleting.

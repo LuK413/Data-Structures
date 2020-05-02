@@ -1,0 +1,6 @@
+A Linked List is a node-based list data structure. It is similar to an array; however,
+the operations are fairly different and memory is allocated dynamically.
+
+This implementation of a linked list supports insertion and deletion at both the front
+and back of the linked list. Deletion of the first element of a given value within the
+list is also supported, as well as searching, lookup and checking for emptiness. 

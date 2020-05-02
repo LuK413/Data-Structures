@@ -1,0 +1,6 @@
+A Trie is a tree data structure that typically stores characters. They are commonly used
+to match prefixes. For example, the words "race" and "racecar" would share the nodes "r",
+"a", "c" and "e". Then, "c" would be a child of "e", "a" a child of "c" and "r" a child
+of "a". 
+
+This trie will allow for insertion of strings, searching for a string and matching a prefix.

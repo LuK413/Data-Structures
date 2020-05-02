@@ -1,0 +1,10 @@
+A Stack is a LIFO(last in, first out) data structure. This means that data that the data
+that is inserted in most recently will be retrieved first. It can be visualized, quite
+literally, like a stack of something, perhaps plates. 
+
+Stacks are typically used in anything regarding "memory" of some state or object. It
+is commonly used for undo, but can also be used for back, function calls, mathematical
+expressions and parsing.
+
+This stack implementation allows the user to push elements, pop elements, check the top
+of the stack and check if it is empty.
