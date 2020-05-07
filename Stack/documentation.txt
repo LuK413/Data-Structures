@@ -6,5 +6,5 @@ Stacks are typically used in anything regarding "memory" of some state or object
 is commonly used for undo, but can also be used for back, function calls, mathematical
 expressions and parsing.
 
-This stack implementation allows the user to push elements, pop elements, check the top
-of the stack, check if it is empty and to print the entire stack.
+This stack implementation is templated for any type and allows the user to push elements, pop elements, check the top
+of the stack and check if it's empty. 

@@ -1,5 +1,5 @@
 A Queue is a FIFO(first in, first out) data structure. This means that the first object
 inserted in a queue will be the first to be retrieved. It can be visualized like a line.
 
-This queue implementation includes enqueueing, dequeueing, checking the top element and
+This queue implementation only allows for a queue of integers and includes enqueueing, dequeueing, checking the top element and
 checking whether or not the queue is empty.
