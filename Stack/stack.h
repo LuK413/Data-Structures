@@ -18,8 +18,6 @@ public:
     bool empty();
     T top();
     ~Stack();
-
-    // friend std::ostream &operator<<(std::ostream &out, const Stack<T> &s);
 };
 
 template <class T>
@@ -49,15 +47,12 @@ void Stack<T>::push(T data) {
 
 template <typename T>
 T Stack<T>::pop() {
-    try {
-        if (this->size == 0)
-            throw 0;
+    if (!this->size) {
+        std::cerr << "The stack is empty, cannot pop" << std::endl;
+    } else {
         --this->size;
         return this->contents[this->size];
-    } catch (int e) {
-        std::cerr << "The stack is empty, cannot pop." << std::endl;
     }
-    
 }
 
 template <typename T>
@@ -67,10 +62,10 @@ bool Stack<T>::empty() {
 
 template <typename T>
 T Stack<T>::top() {
-    try {
+    if (!this->size) {
+        std::cerr << "Empty stack, can't get pop" << std::endl;
+    } else {
         return this->contents[this->size - 1];
-    } catch (std::exception e) {
-        std::cerr << "Could not pop. " << e.what() << std::endl;
     }
 }
 
