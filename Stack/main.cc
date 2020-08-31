@@ -1,5 +1,4 @@
 #include <iostream>
-#include <exception>
 #include <string>
 #include "stack.h"
 
