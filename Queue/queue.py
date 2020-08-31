@@ -1,5 +1,5 @@
 class Queue:
-    """docstring for Queue"""
+    """Queue data structure"""
 
     def __init__(self):
         self.contents = []
