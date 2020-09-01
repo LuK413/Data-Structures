@@ -27,7 +27,7 @@ public:
     void addToIth(int, int);
     void addToBack(int);
     int front();
-    int ith();
+    int ith(int);
     int back();
     void deleteFromFront();
     void deleteFromIth(int);

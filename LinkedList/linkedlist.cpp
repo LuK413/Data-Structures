@@ -87,26 +87,43 @@ int LinkedList::front() {
     return this->head->data;
 }
 
-int LinkedList::ith() {
-    
+int LinkedList::ith(int position) {
+    Node *currNode = this->head;
+    for (int i = 1; i < position; ++i) {
+        currNode = currNode->next;
+    }
+    return currNode->data;
 }
 
 int LinkedList::back() {
     Node *currNode = this->head;
-    while (currNode->next) {
+    while (currNode && currNode->next) {
         currNode = currNode->next;
     }
     return currNode->data;
 }
 
 void LinkedList::deleteFromFront() {
-    
+    Node *temp = this->head;
+    this->head = this->head->next;
+    delete temp;
 }
 
-void LinkedList::deleteFromIth(int) {
-    
+void LinkedList::deleteFromIth(int position) {
+    Node *currNode = this->head;
+    Node *prevNode = nullptr;
+    for (int i = 1; i < position; ++i) {
+        prevNode = currNode;
+        currNode = currNode->next;
+    }
+    prevNode->next = currNode->next;
+    delete currNode;
 }
 
 void LinkedList::deleteFromBack() {
-    
+    Node *temp = this->head;
+    while (temp && temp->next) {
+        temp = temp->next;
+    }
+    delete temp; 
 }
