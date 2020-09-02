@@ -32,6 +32,7 @@ public:
     void deleteFromFront();
     void deleteFromIth(int);
     void deleteFromBack();
+    ~LinkedList();
 };
 
 #endif

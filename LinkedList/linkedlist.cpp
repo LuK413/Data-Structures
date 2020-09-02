@@ -33,6 +33,10 @@ Node::~Node() {
 
 LinkedList::LinkedList(): head{nullptr} {}
 
+LinkedList::~LinkedList() {
+    delete this->head;
+}
+
 void LinkedList::printList() {
     Node *currNode = this->head;
     std::cout << "[";
@@ -104,9 +108,9 @@ int LinkedList::back() {
 }
 
 void LinkedList::deleteFromFront() {
-    Node *temp = this->head;
-    this->head = this->head->next;
-    delete temp;
+    Node *temp = this->head->next;
+    delete this->head;
+    this->head = temp;
 }
 
 void LinkedList::deleteFromIth(int position) {
